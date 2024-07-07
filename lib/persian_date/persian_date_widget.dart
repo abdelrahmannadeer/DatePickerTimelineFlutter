@@ -41,8 +41,8 @@ class PersianDateWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text((PersianDate.persianMonthNames(date.month)), // Month
-                  style: monthTextStyle),
+              // Text((PersianDate.persianMonthNames(date.month)), // Month
+              //     style: monthTextStyle),
               Text('${date.day}'.toPersianDigit(), // Date
                   style: dateTextStyle),
               Text((PersianDate.persianWeeklyName(date)), // WeekDay
