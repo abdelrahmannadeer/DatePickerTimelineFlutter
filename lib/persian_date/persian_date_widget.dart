@@ -37,7 +37,7 @@ class PersianDateWidget extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(8),
-          child: Column(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
