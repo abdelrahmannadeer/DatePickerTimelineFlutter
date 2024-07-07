@@ -29,7 +29,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   DateTime _selectedValue = DateTime.now();
 
-
   @override
   void initState() {
     super.initState();
@@ -38,12 +37,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.replay),
-        onPressed: () {
-          _controller.animateToSelection();
-        },
-      ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.replay),
+          onPressed: () {
+            _controller.animateToSelection();
+          },
+        ),
         appBar: AppBar(
           title: Text(widget.title!),
         ),
@@ -53,10 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("You Selected:"),
-              Padding(
-                padding: EdgeInsets.all(10),
-              ),
               Text(_selectedValue.toString()),
               Padding(
                 padding: EdgeInsets.all(20),
@@ -64,8 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 child: DatePicker(
                   DateTime.now(),
-                  width: 60,
+                  width: 100,
                   height: 80,
+                  calendarType: CalendarType.persianDate,
                   controller: _controller,
                   initialSelectedDate: DateTime.now(),
                   selectionColor: Colors.black,
